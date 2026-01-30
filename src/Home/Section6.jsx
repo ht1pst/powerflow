@@ -8,7 +8,7 @@ function Section6(){
             <div className="relative flex flex-col lg:flex-row justify-between items-center lg:px-30 pt-35">
                 <div>
                 <p className="text-[#F34F3A]">BMI Calculator</p>
-                <h1 className="text-white lg:text-[45px] text-[40px] font-bold lg:w-100 leading-tight mt-5 ">Calculate Your Body Mass Index</h1>
+                <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-100 leading-tight mt-5 ">Calculate Your Body Mass Index</h1>
                 </div>
 
 

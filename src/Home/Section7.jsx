@@ -3,7 +3,7 @@ function Section7(){
         <section className="bg-black lg:h-200 h-850 px-[20px]">
            <div className="pt-10">
              <p className="text-[#F34F3A] flex justify-center">Gym Schedule</p>
-             <h1 className="text-white lg:text-[45px] text-[40px] font-bold lg:w-150 text-center leading-tight mt-3 flex justify-center mx-auto ">Find the Best Time to Join Your Favorite Classes</h1>
+             <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 text-center leading-tight mt-3 flex justify-center mx-auto ">Find the Best Time to Join Your Favorite Classes</h1>
              <p className="text-gray-100 mt-6 lg:w-150 justify-center mx-auto text-center text-[17px]">Check our weekly schedule to plan your workouts, from morning yoga to evening strength training sessions.</p>
              </div> 
 

@@ -60,7 +60,7 @@ function Section5() {
        <div>
             <div>
                 <p className="text-[#F34F3A]">Our Services</p>
-                <h1 className="text-white lg:text-[45px] text-[42px] font-bold lg:w-160 leading-tight mt-5 ">Classes Designed For You</h1>
+                <h1 className="text-white lg:text-[45px] text-[42px] font-[800] lg:w-160 leading-tight mt-5 ">Classes Designed For You</h1>
                 <p className="text-[#dadadbff] mt-4 lg:w-150  text-[17px] leading-[30px]">From personal training and group classes to nutrition guidance and strength coaching, we provide everything you need to achieve lasting fitness results.</p>
             </div>
             <div></div>

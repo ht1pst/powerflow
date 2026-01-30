@@ -101,7 +101,7 @@ function Section9() {
         {/* LEFT */}
         <div>
           <p className="text-[#F34F3A] font-bold text-[17px]">FAQ</p>
-          <h1 className="text-white lg:text-[45px] text-[40px] font-bold lg:w-150 leading-tight mt-5">
+          <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 leading-tight mt-5">
             Answers to Your Questions About Gym & Fitness
           </h1>
         </div>
