@@ -2,7 +2,7 @@ import img from "../assets/l4.webp";
 import img2 from "../assets/s1.webp";
 function Section4(){
     return(
-        <section className="bg-black lg:h-160 h-300  relative px-[20px]">
+        <section className="bg-black lg:h-160 h-280  relative px-[20px]">
 
 
             
@@ -18,8 +18,8 @@ function Section4(){
 
 <div className="">
     <div className="relative">
-        <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white lg:w-140 w-80  h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
-        <img src={img} alt="" className="lg:w-140 w-80 lg:h-90" />
+        <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white lg:w-140 w-full  h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
+        <img src={img} alt="" className="lg:w-140  lg:h-90" />
         </div>
 </div>
 

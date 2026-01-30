@@ -6,7 +6,7 @@ function Section3(){
   className="relative min-h-screen bg-cover bg-center bg-no-repeat lg:h-260 h-600  lg:px-0"
 >
   {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/50 z-0"></div>
+  <div className="absolute inset-0 bg-black/70 z-0"></div>
 
   {/* Content on top */}
   <div className="relative z-10  pt-20 px-[20px] lg:px-0">

@@ -3,8 +3,9 @@ import img2 from "../assets/s3.webp";
 function Section2(){
     return(
 
-<section className="bg-black pt-20 lg:h-200 h-460 px-[20px] lg:px-0">
-    <div className="flex  flex-col lg:flex-row justify-center gap-20 items-center">
+<section className="bg-black pt-20 lg:h-200 h-435 px-[20px] lg:px-0 relative">
+     
+    <div className="flex  flex-col lg:flex-row justify-center lg:gap-20 gap-10 items-center">
 <div>
 <h1 className="text-[#F34F3A] font-bold text-[16px]">About Us</h1>
 <h1 className="text-white lg:text-[50px] text-[42px] font-bold lg:w-160 w-[100%] leading-tight mt-5">We Help You Build a Stronger, Healthier, and Fitter You</h1>

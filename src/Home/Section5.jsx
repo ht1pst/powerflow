@@ -8,27 +8,50 @@ import img5 from "../assets/l5.webp";
 import img6 from "../assets/l6.webp";
 
 import icon from "../assets/logo-icon.webp";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 function Section5() {
-  const [index, setIndex] = useState(1);
+ const cards = [
+    {
+      baseImg: img1,
+      description:
+        "Strength & Conditioning",
+    },
 
- const GAP = 40;
+     {
+      baseImg: img2,
+      description:
+        "Personal Training",
+    },
 
-// detect mobile
-const isMobile = window.innerWidth < 1024;
+    {
+      baseImg: img3,
+      description:
+        "HIIT & Group Training",
+    },
 
-// widths
-const CARD_WIDTH = isMobile ? window.innerWidth : 720;
-const VIEWPORT = isMobile ? window.innerWidth : CARD_WIDTH * 1;
 
-const slideX =
-  VIEWPORT / 2 - CARD_WIDTH / 2 - index * (CARD_WIDTH + GAP);
+     {
+      baseImg: img4,
+      description:
+        "Yoga & Pilates",
+    },
 
-  const TOTAL_CARDS = 6;
 
-const MAX_INDEX = isMobile
-  ? TOTAL_CARDS - 1
-  : TOTAL_CARDS - 1;
+      {
+      baseImg: img5,
+      description:
+        "Circuit Training",
+    },
+
+      {
+      baseImg: img6,
+      description:
+        "Athletic Performance",
+    },
+  ];
+
 
   return (
     <section className="bg-black py-20 overflow-hidden ">
@@ -43,388 +66,47 @@ const MAX_INDEX = isMobile
             <div></div>
         </div>
 
-        <div className="flex gap-4">
-          <button
-  onClick={() => setIndex((i) => Math.max(i - 1, 0))}
-  className="w-10 h-10 text-2xl text-white bg-[#F34F3A]"
->
-  ‹
-</button>
 
-<button
-  onClick={() => setIndex((i) => Math.min(i + 1, MAX_INDEX))}
-  className="w-10 h-10 text-2xl text-white bg-[#F34F3A]"
->
-  ›
-</button>
-        </div>
       </div>
 
       {/* Carousel */}
-      <div className="flex justify-center">
-        <div  className="overflow-hidden w-screen">
-          <div
-            className="flex gap-10 transition-transform duration-500"
-            style={{ transform: `translateX(${slideX}px)` }}
-          >
-            {/* CARD 1 */}
-          <div style={{ backgroundImage: `url(${img1})` }}
-              className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
+    <Swiper
+  spaceBetween={20}
+  slidesPerView={1}
+  pagination={{ clickable: true }}
+  modules={[Pagination, Autoplay, EffectFade]}
+  effect="fade"                // makes slides fade in/out
+  autoplay={{ 
+    delay: 3000,               // 3 seconds per slide
+    disableOnInteraction: false
+  }}
+  fadeEffect={{ crossFade: true }}  // smooth fade transition
+  className="mySwiper pb-20"
+>
+  {cards.map((card, i) => (
+    <SwiperSlide key={i}>
+      <div
+       style={{ backgroundImage: `url(${card.baseImg})` }}
+              className="lg:h-110 lg:w-180 h-60 w-[100%] shrink-0 bg-cover bg-center relative group"
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: i * 0.2 }}
+      >
+      <div className="absolute inset-0 bg-black/50"></div>
+          <img src={icon} className="lg:w-35 w-25 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
 
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
-
-<div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
-
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-
-         
-
-            {/* CARD 2 */}
-            <div style={{ backgroundImage: `url(${img2})` }}
-               className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
-
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
+        {/* Description */}
+        <h1 className=" absolute bottom-10 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white">
+          {card.description}
+        </h1>
 
 <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
 
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-            {/* CARD 3 */}
-            <div style={{ backgroundImage: `url(${img3})` }}
-               className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
-
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
-
-<div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
-
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-
-
-            {/* CARD 4 */}
-            <div style={{ backgroundImage: `url(${img4})` }}
-               className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
-
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
-
-<div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
-
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-
-            {/* CARD 5 */}
-            <div style={{ backgroundImage: `url(${img5})` }}
-               className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
-
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
-
-<div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
-
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-
-            {/* CARD 6 */}
-            <div style={{ backgroundImage: `url(${img6})` }}
-               className="lg:h-110 lg:w-180 h-60 w-90 shrink-0 bg-cover bg-center relative group">
-
-          <div className="absolute inset-0 bg-black/50"></div>
-
-           <img src={icon} className="w-35 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-           
-<div className=" absolute bottom-5 z-10  left-1/2 -translate-x-1/2 text-[17px] font-bold text-white"><h1 className="mt-20">Strength & Conditioning</h1></div>
-
-<div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#F34F3A] to-transparent opacity-90 blur-8xl"></div>
-
-<div className="
-                   absolute inset-0 bg-[#F34F3A]
-                   opacity-0 group-hover:opacity-100 
-                   transition-opacity duration-300 
-                 "></div>
-
-
-<div className="
-    absolute top-1/3
-    opacity-0  -translate-y-1/2
-    group-hover:opacity-100 group-hover:translate-y-0
-    transition-all duration-300
-    text-white 
-  ">
-
-<a
-    href="#"
-    className="
-      text-[17px] text-[#2b2f32] font-semibold text-white 
-      flex items-center text-center
-      transition-all duration-300 z-30
-    "
-  >
-   Improve flexibility, reduce stress, and enhance body control with calming yoga and Pilates sessions led by certified instructors
-  </a>
-
-
-<div className="flex justify-center mt-5">
-  <a
-    href="#"
-    className="
-      text-[18px] text-white #7d8082ff mt-1 font-semibold bg-transparent border border-[#7d8082ff]  h-10 w-35
-      flex items-center justify-center
-      group-hover:opacity-100 group-hover:translate-y-0
-      transition-all duration-300 delay-200
-    "
-  >
-    View Details
-  </a>
-  </div>
-
-
-</div>
-
-                 
-          </div>
-          </div>
-        </div>
       </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
     </section>
   );
 }
