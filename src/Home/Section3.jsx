@@ -3,7 +3,7 @@ function Section3(){
     return(
 <section
   style={{ backgroundImage: `url(${img})` }}
-  className="relative min-h-screen bg-cover bg-center bg-no-repeat lg:h-260 h-600  lg:px-0"
+  className="relative min-h-screen bg-cover bg-center bg-no-repeat lg:h-260 h-570  lg:px-0"
 >
   {/* Dark overlay */}
   <div className="absolute inset-0 bg-black/70 z-0"></div>
@@ -12,7 +12,7 @@ function Section3(){
   <div className="relative z-10  pt-20 px-[20px] lg:px-0">
     <p className="text-[#F34F3A] flex justify-center">Pricing Plans</p>
 
-    <h1 className="text-white lg:text-[45px] text-[40px] font-bold lg:w-160 w-[100%] leading-tight mt-5 flex justify-center mx-auto text-center">
+    <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-160 w-[100%] leading-tight mt-5 flex justify-center mx-auto text-center">
       Choose the Perfect Plan That Truly Fits You
     </h1>
 
@@ -21,9 +21,9 @@ function Section3(){
     </p>
   </div>
 
-<div className="text-white relative flex flex-col lg:flex-row justify-center gap-7 mt-10">
+<div className="text-white relative flex flex-col lg:flex-row justify-center gap-15 mt-10">
  {/* div1 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-155 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-135 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">
@@ -50,7 +50,7 @@ function Section3(){
 </div>
 
  {/* div2 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-155 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-140 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">
@@ -78,7 +78,7 @@ function Section3(){
 
 
 {/* div3 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-155 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-140 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">

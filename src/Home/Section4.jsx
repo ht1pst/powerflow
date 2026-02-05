@@ -2,14 +2,14 @@ import img from "../assets/l4.webp";
 import img2 from "../assets/s1.webp";
 function Section4(){
     return(
-        <section className="bg-black lg:h-160 h-280  relative px-[20px]">
+        <section className="bg-black lg:h-160 h-250  relative px-[20px]">
 
 
             
             <div>
                  <p className="text-[#F34F3A] flex justify-center">Why Choose Us</p>
 
-    <h1 className="text-white lg:text-[45px] text-[40px] font-bold lg:w-160 leading-tight mt-5 flex justify-center mx-auto text-center">
+    <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-160 leading-tight mt-5 flex justify-center mx-auto text-center">
      Build Strength, Endurance, and Confidence with Us
     </h1>
             </div>
