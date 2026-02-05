@@ -23,7 +23,7 @@ function Section3(){
 
 <div className="text-white relative flex flex-col lg:flex-row justify-center gap-15 mt-10">
  {/* div1 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-135 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-auto pb-5 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">
@@ -50,7 +50,7 @@ function Section3(){
 </div>
 
  {/* div2 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-140 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135  h-auto pb-5 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">
@@ -78,7 +78,7 @@ function Section3(){
 
 
 {/* div3 */}
-<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135 h-140 relative">
+<div className="bg-black/2 backdrop-blur-sm lg:w-100 w-[90%]  mx-auto  lg:h-135  h-auto pb-5 relative">
  <div className="absolute bottom-0  border-t-transparent border-t-none border-b-white w-full h-40 bg-gradient-to-t from-[#F34F3A]   to-transparent opacity-90 blur-8xl "></div>
 
 <div className="px-[25px]">
