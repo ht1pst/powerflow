@@ -101,7 +101,7 @@ function Section9() {
         {/* LEFT */}
         <div>
           <p className="text-[#F34F3A] font-bold text-[17px]">FAQ</p>
-          <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 leading-tight mt-5">
+          <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 leading-[45px] mt-5">
             Answers to Your Questions About Gym & Fitness
           </h1>
         </div>
@@ -109,7 +109,7 @@ function Section9() {
         {/* RIGHT */}
         <div>
           {/* CATEGORY TABS */}
-        <div className="flex flex-col lg:flex-col  lg:items-center">
+        <div className="flex flex-col lg:flex-col  lg:items-center mt-7">
   <h1
     onClick={() => changeCategory("membership")}
     className={`cursor-pointer lg:text-[16px] text-[18px] lg:w-52 h-12 flex lg:justify-center px-3  items-center transition-all duration-300 ${
@@ -161,7 +161,7 @@ function Section9() {
                     }
                     className="w-full flex justify-between items-center lg:px-5 py-3"
                   >
-                    <span className="text-white text-xl  font-bold text-start">
+                    <span className="text-white text-[18px]  font-bold text-start">
                       {faq.question}
                     </span>
                     <span className="text-2xl font-bold text-white">
@@ -186,7 +186,7 @@ function Section9() {
       </div>
 
       {/* CTA */}
-     <div className="bg-[#F34F3A] flex flex-col lg:flex-row justify-center lg:items-center lg:h-35 h-80 gap-10 lg:gap-50 lg:mt-20  px-[20px]">
+     <div className="bg-[#F34F3A] hidden lg:block flex flex-col lg:flex-row justify-center lg:items-center lg:h-35 h-80 gap-10 lg:gap-50 lg:mt-20 mt-10  px-[20px]">
        <h1 className="text-white font-bold text-[35px]">Ready to take the first step towards your fitness goals?</h1> 
        <button className="text-[15px] font-bold text-white bg-[#F34F3A] #9d9c9c w-28 h-10 border border-[#c3bdbc]">JOIN NOW</button> 
        </div>
