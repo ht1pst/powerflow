@@ -1,4 +1,5 @@
 import bg from "../assets/9.webp";
+import { motion } from "framer-motion";
 function Section6(){
     return(
         <section style={{ backgroundImage: `url(${bg})` }}
@@ -7,14 +8,31 @@ function Section6(){
 
             <div className="relative flex flex-col lg:flex-row justify-between items-center lg:px-30 pt-35">
                 <div>
-                <p className="text-[#F34F3A]">BMI Calculator</p>
-                <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-100 leading-tight mt-5 ">Calculate Your Body Mass Index</h1>
+                <motion.p className="text-[#F34F3A]"
+                 initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                >BMI Calculator
+                </motion.p>
+
+                <motion.h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-100 leading-tight mt-5 "
+                 initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                >Calculate Your Body Mass Index</motion.h1>
                 </div>
 
 
 
 
-                <div className=" bg-black/20 backdrop-blur-lg   shadow-lg lg:px-[40px] px-[20px] h-110 lg:w-170 w-[100%] py-[50px] mt-5">
+                <motion.div className=" bg-black/20 backdrop-blur-lg   shadow-lg lg:px-[40px] px-[20px] h-110 lg:w-170 w-[100%] py-[50px] mt-5"
+                 initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                >
                     <h1 className="text-white text-[18px]">Height (cm)</h1>
                     <input type="text" placeholder="ex:170"  className="bg-trasparent border border-gray-400 h-11 lg:w-150 w-[100%] rounded-lg text-white px-3 mt-3"/>
 
@@ -36,7 +54,7 @@ function Section6(){
     <p className="text-white text-sm">Obese</p>
 </div>
 
-                </div>
+                </motion.div>
 
             </div>
         </section>

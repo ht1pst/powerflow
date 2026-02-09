@@ -1,13 +1,30 @@
+import { motion } from "framer-motion";
 function Section7(){
     return(
         <section className="bg-black lg:h-200 h-850 px-[20px]">
            <div className="pt-10">
-             <p className="text-[#F34F3A] flex justify-center">Gym Schedule</p>
-             <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 text-center leading-tight mt-3 flex justify-center mx-auto ">Find the Best Time to Join Your Favorite Classes</h1>
-             <p className="text-gray-100 mt-6 lg:w-150 justify-center mx-auto text-center text-[17px]">Check our weekly schedule to plan your workouts, from morning yoga to evening strength training sessions.</p>
+             <motion.p className="text-[#F34F3A] flex justify-center"
+             initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+             >Gym Schedule</motion.p>
+             <motion.h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 text-center leading-tight mt-3 flex justify-center mx-auto "
+             initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+             >Find the Best Time to Join Your Favorite Classes</motion.h1>
+
+             <motion.p className="text-gray-100 mt-6 lg:w-150 justify-center mx-auto text-center text-[17px]"
+             initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+             >Check our weekly schedule to plan your workouts, from morning yoga to evening strength training sessions.</motion.p>
              </div> 
 
-<div className="grid lg:grid-cols-7 grid-cols-1 lg:px-25 mt-10">
+<div className="grid lg:grid-cols-7 grid-cols-1 lg:px-20 mt-10">
 
 
 <div>

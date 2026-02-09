@@ -5,6 +5,7 @@ import bg from "../assets/22.webp";
 import React, { useState, useEffect } from "react";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+
 function Section8(){
 
 const cards = [

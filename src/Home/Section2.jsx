@@ -1,26 +1,52 @@
 import img1 from "../assets/s2.webp";
 import img2 from "../assets/s3.webp";
+import { motion } from "framer-motion";
 function Section2(){
     return(
 
 <section className="bg-black pt-20 lg:h-200 h-435 px-[20px] lg:px-0 relative">
      
-    <div className="flex  flex-col lg:flex-row justify-center lg:gap-20 gap-10 items-center">
+    <div className="flex  flex-col lg:flex-row justify-center lg:gap-20 gap-10 items-center"    >
 <div>
-<h1 className="text-[#F34F3A] font-bold text-[16px]">About Us</h1>
-<h1 className="text-white lg:text-[50px] text-[42px] font-[800] lg:w-160 w-[100%] leading-tight mt-5">We Help You Build a Stronger, Healthier, and Fitter You</h1>
-<p className="text-[#dadadbff] #dadadbff lg:text-[17px] text-[19px] leading-normal lg:w-160 w-[100%] mt-5 ">Founded with a passion for fitness and community, our gym combines state-of-the-art facilities, expert trainers, and personalized programs to help you reach your full potential. Whether you're a beginner or an athlete, our goal is to make every workout enjoyable, safe, and effective.</p>
-<button className="text-[15px] font-bold text-white bg-[#F34F3A] lg:w-53 w-60 h-10 mt-5">EXPLORE OUR CLASSES</button>
+<motion.h1 className="text-[#F34F3A] font-bold text-[16px]"
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>About Us</motion.h1>
+<motion.h1 className="text-white lg:text-[50px] text-[42px] font-[800] lg:w-160 w-[100%] leading-tight mt-5"
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>We Help You Build a Stronger, Healthier, and Fitter You</motion.h1>
+<motion.p className="text-[#dadadbff] #dadadbff lg:text-[17px] text-[19px] leading-normal lg:w-160 w-[100%] mt-5 "
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>Founded with a passion for fitness and community, our gym combines state-of-the-art facilities, expert trainers, and personalized programs to help you reach your full potential. Whether you're a beginner or an athlete, our goal is to make every workout enjoyable, safe, and effective.</motion.p>
+<motion.button className="text-[15px] font-bold text-white bg-[#F34F3A] lg:w-53 w-60 h-10 mt-5"
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>EXPLORE OUR CLASSES</motion.button>
 
 </div>
 
-<div className="flex   lg:gap-7 gap-5 ">
+<motion.div className="flex   lg:gap-7 gap-5 "
+initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
 
     <div>
-        <img src={img1} alt="" className="w-76 h-32" />
+        <img src={img1} alt="" className="w-76 h-32 lg:w-70 lg:h-60" />
         <div className="bg-[#2d2e2fff] #2d2e2fff flex justify-center flex-col items-center h-32 mt-5">
             <h1 className="lg:text-[50px] text-[35px] text-white font-bold m-0 leading-none">25<span className="text-[#F34F3A]">+</span></h1>
-            <p className="text-white text-[15px] lg:w-[100%]  font-bold m-0">Certified Trainers</p>
+            <p className="text-white text-[15px] lg:w-[100%] flex justify-center  font-bold m-0">Certified Trainers</p>
           
         </div>
     </div>
@@ -32,11 +58,11 @@ function Section2(){
             <p className="text-white text-[15px] font-bold m-0">Active Member</p>
             
         </div>
- <img src={img2} alt="" className="w-76 mt-5 h-32" />
+ <img src={img2} alt="" className="w-76 h-32 lg:w-70 lg:h-60 lg:mt-5" />
     </div>
 
 
-</div>
+</motion.div>
 
     </div>
 
@@ -45,32 +71,52 @@ function Section2(){
 <div className="flex flex-col lg:flex-row justify-center lg:gap-20 gap-10 mt-10">
 
 
-<div>
+<motion.div
+initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
 <i className="fas fa-heartbeat text-[#F34F3A] lg:text-4xl text-3xl"></i>
 <h1 className="text-white text-[22px] font-bold mt-4 lg:mt-0">Passion</h1>
 <p className="text-[#dadadbff]  text-[17px] w-70 mt-4 lg:mt-0">We live and breathe fitness, every rep, every session, every success.</p>
-</div>
+</motion.div>
 
 
-<div>
+<motion.div
+initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
    <i className="fas fa-users text-[#F34F3A] lg:text-4xl text-3xl"></i>
    <h1 className="text-white text-[22px] font-bold mt-4 lg:mt-0">Community</h1>
    <p className="text-[#dadadbff]  text-[17px] w-70 mt-4 lg:mt-0">Together we grow stronger, motivation thrives when shared.</p>
-</div>
+</motion.div>
 
 
-<div>
+<motion.div
+initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
     <i className="fas fa-dumbbell text-[#F34F3A] lg:text-4xl text-3xl"></i>
     <h1 className="text-white text-[22px] font-bold mt-4 lg:mt-0">Discipline</h1>
     <p className="text-[#dadadbff]  text-[17px] w-70 mt-4 lg:mt-0" >Consistency is key, we push our members to stay committed.</p>
-</div>
+</motion.div>
 
 
-<div>
+<motion.div
+initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+>
     <i className="fas fa-star text-[#F34F3A] lg:text-4xl text-3xl"></i>
     <h1 className="text-white text-[22px] font-bold mt-4 lg:mt-0">Excellence</h1>
     <p className="text-[#dadadbff]  text-[17px] w-70 mt-4 lg:mt-0">We strive for the highest quality in training, service, and results.</p>
-</div>
+</motion.div>
 
 
 

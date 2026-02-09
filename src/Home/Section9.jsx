@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function Section9() {
   const [activeCategory, setActiveCategory] = useState("membership");
   const [activeIndex, setActiveIndex] = useState(null);
@@ -100,17 +100,32 @@ function Section9() {
       <div className="flex flex-col lg:flex-row justify-center gap-8 lg:px-10 px-[20px]">
         {/* LEFT */}
         <div>
-          <p className="text-[#F34F3A] font-bold text-[17px]">FAQ</p>
-          <h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 leading-[45px] mt-5">
+          <motion.p className="text-[#F34F3A] font-bold text-[17px]"
+           initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >FAQ</motion.p>
+          <motion.h1 className="text-white lg:text-[45px] text-[40px] font-[800] lg:w-150 leading-[45px] mt-5"
+           initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             Answers to Your Questions About Gym & Fitness
-          </h1>
+          </motion.h1>
         </div>
 
         {/* RIGHT */}
         <div>
           {/* CATEGORY TABS */}
-        <div className="flex flex-col lg:flex-col  lg:items-center mt-7">
-  <h1
+        <div className="flex flex-col lg:flex-row  lg:items-center mt-7">
+  <motion.h1
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+
     onClick={() => changeCategory("membership")}
     className={`cursor-pointer lg:text-[16px] text-[18px] lg:w-52 h-12 flex lg:justify-center px-3  items-center transition-all duration-300 ${
       activeCategory === "membership"
@@ -119,9 +134,14 @@ function Section9() {
     }`}
   >
     Membership & Plans
-  </h1>
+  </motion.h1>
 
-  <h1
+  <motion.h1
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+
     onClick={() => changeCategory("training")}
     className={`cursor-pointer lg:text-[16px] text-[18px] lg:w-52 h-12 flex lg:justify-center px-3 items-center transition-all duration-300 ${
       activeCategory === "training"
@@ -130,9 +150,14 @@ function Section9() {
     }`}
   >
     Training & Facilities
-  </h1>
+  </motion.h1>
 
-  <h1
+  <motion.h1
+ initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.3 }}
+   transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+
     onClick={() => changeCategory("billing")}
     className={`cursor-pointer lg:text-[16px] text-[18px] lg:w-52 h-12 flex lg:justify-center px-3 items-center transition-all duration-300 ${
       activeCategory === "billing"
@@ -141,12 +166,12 @@ function Section9() {
     }`}
   >
     Billing & Policies
-  </h1>
+  </motion.h1>
 </div>
 
 
           {/* FAQ LIST */}
-          <div className="max-w-xl space-y-4 mt-8">
+          <div className="max-w-xl space-y-1 mt-8">
             {faqData[activeCategory].map((faq, index) => {
               const isActive = activeIndex === index;
 
@@ -186,7 +211,7 @@ function Section9() {
       </div>
 
       {/* CTA */}
-     <div className="bg-[#F34F3A] hidden lg:block flex flex-col lg:flex-row justify-center lg:items-center lg:h-35 h-80 gap-10 lg:gap-50 lg:mt-20 mt-10  px-[20px]">
+     <div className="bg-[#F34F3A] hidden lg:block lg:flex flex-col lg:flex-row justify-center lg:items-center lg:h-35 h-80 gap-10 lg:gap-50 lg:mt-20 mt-10  px-[20px]">
        <h1 className="text-white font-bold text-[35px]">Ready to take the first step towards your fitness goals?</h1> 
        <button className="text-[15px] font-bold text-white bg-[#F34F3A] #9d9c9c w-28 h-10 border border-[#c3bdbc]">JOIN NOW</button> 
        </div>

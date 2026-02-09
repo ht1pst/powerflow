@@ -2,7 +2,7 @@ import icon from "../assets/logo.webp";
 function Footer(){
     return(
         <section className="bg-[#181919] pt-20 lg:h-120 h-310 px-[20px]">
-            <div className="flex flex-col justify-center lg:gap-28 gap-5">
+            <div className="flex flex-col lg:flex-row justify-center lg:gap-28 gap-5">
 
 
                 <div>
